@@ -17,6 +17,7 @@ libcdsprpc.so
 libmialgoengine.so
 libmibokeh_712.so
 libmpbase.so
+libnpu.so
 libOpenCL.so
 libqti-perfd-client.so
 libsdsprpc.so
