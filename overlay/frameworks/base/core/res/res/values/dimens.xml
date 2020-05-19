@@ -26,4 +26,9 @@
         where the exact bezier curve cannot be retrieved.  This value will be subtracted from
         rounded_corner_radius to more accurately provide a "radius" for the rounded corner. -->
     <dimen name="rounded_corner_radius_adjustment">19px</dimen>
+
+    <!-- Height of the status bar -->
+    <dimen name="status_bar_height_portrait">35dp</dimen>
+
 </resources>
+>>>>>>> 981c4d4... davinci: update window corner radius adjustment
