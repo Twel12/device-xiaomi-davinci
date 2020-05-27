@@ -112,17 +112,18 @@ public class PopupCameraService extends Service implements Handler.Callback {
         cameraManager.registerAvailabilityCallback(availabilityCallback, null);
         mSensorManager = getSystemService(SensorManager.class);
         mFreeFallSensor = mSensorManager.getDefaultSensor(Constants.FREE_FALL_SENSOR_ID);
-        mPopupCameraPreferences = new PopupCameraPreferences(this);
-        mSoundPool =
-                new SoundPool.Builder()
-                        .setMaxStreams(1)
-                        .setAudioAttributes(
-                                new AudioAttributes.Builder()
-                                        .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-                                        .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                                        .setFlags(AudioAttributes.FLAG_AUDIBILITY_ENFORCED)
-                                        .build())
-                        .build();
+        try{
+            mPopupCameraPreferences = new PopupCameraPreferences(this);
+        }
+        catch(Exception ex){
+            //wait for boot to complete
+        }
+        mSoundPool = new SoundPool.Builder().setMaxStreams(1)
+                .setAudioAttributes(new AudioAttributes.Builder()
+                        .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+                        .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                        .setFlags(AudioAttributes.FLAG_AUDIBILITY_ENFORCED)
+                        .build()).build();
         String[] soundNames = getResources().getStringArray(R.array.popupcamera_effects_names);
         mSounds = new int[soundNames.length];
         for (int i = 0; i < soundNames.length; i++) {
