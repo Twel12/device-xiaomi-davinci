@@ -163,7 +163,6 @@ Return<bool> FingerprintInscreen::handleAcquired(int32_t acquiredInfo, int32_t v
             return true;
         }
     }
-
     return false;
 }
 
@@ -189,7 +188,6 @@ Return<void> FingerprintInscreen::setCallback(const sp<IFingerprintInscreenCallb
         std::lock_guard<std::mutex> _lock(mCallbackLock);
         mCallback = callback;
     }
-
     return Void();
 }
 
