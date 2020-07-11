@@ -101,6 +101,7 @@ debug.egl.hw=0
 debug.enable.sglscale=1
 debug.gralloc.enable_fb_ubwc=1
 debug.gralloc.gfx_ubwc_disable=0
+debug.hwui.renderer=opengl
 debug.mdpcomp.logs=0
 debug.sf.disable_backpressure=1
 debug.sf.early_phase_offset_ns=11600000
