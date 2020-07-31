@@ -18,31 +18,34 @@ import common
 import re
 
 def FullOTA_Assertions(info):
-  AddBasebandAssertion(info, info.input_zip)
+  input_zip = info.input_zip
+  AddBasebandAssertion(info, input_zip)
   return
 
 def IncrementalOTA_Assertions(info):
-  AddBasebandAssertion(info, info.input_zip)
+  input_zip = info.target_zip
+  AddBasebandAssertion(info, input_zip)
   return
 
 def FullOTA_InstallEnd(info):
-  OTA_InstallEnd(info)
+  input_zip = info.input_zip
+  OTA_InstallEnd(info, input_zip)
   return
 
 def IncrementalOTA_InstallEnd(info):
-  OTA_InstallEnd(info)
+  input_zip = info.target_zip
+  OTA_InstallEnd(info, input_zip)
   return
 
-def AddImage(info, basename, dest):
+def AddImage(info, input_zip, basename, dest):
   name = basename
-  data = info.input_zip.read("IMAGES/" + basename)
+  data = input_zip.read("IMAGES/" + basename)
   common.ZipWriteStr(info.output_zip, name, data)
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
 
-def OTA_InstallEnd(info):
-  info.script.Print("Patching firmware images...")
-  AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
-  AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+def OTA_InstallEnd(info, input_zip):
+  AddImage(info, input_zip, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+  AddImage(info, input_zip, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   return
 
 def AddBasebandAssertion(info, input_zip):
