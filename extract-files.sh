@@ -70,7 +70,7 @@ function blob_fixup() {
     vendor/lib64/hw/camera.qcom.so)
         patchelf --remove-needed "libMegviiFacepp-0.5.2.so" "${2}"
         patchelf --remove-needed "libmegface.so" "${2}"
-        patchelf --add-needed "libshim_megvii.so" "${2}"
+        patchelf --add-needed "libshim_camera.so" "${2}"
         ;;
     esac
 }
