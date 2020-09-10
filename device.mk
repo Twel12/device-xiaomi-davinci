@@ -88,7 +88,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/permissions/org.codeaurora.snapcam.xml:system/etc/permissions/org.codeaurora.snapcam.xml
+    $(LOCAL_PATH)/permissions/com.google.android.GoogleCamera.Urnyx.xml:system/etc/permissions/com.google.android.GoogleCamera.Urnyx.xml
 
 # Sensors
 PRODUCT_PACKAGES += \
