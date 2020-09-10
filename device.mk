@@ -317,7 +317,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml
 # Permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/permissions/org.codeaurora.snapcam.xml:system/etc/permissions/org.codeaurora.snapcam.xml
+    $(LOCAL_PATH)/permissions/com.google.android.GoogleCamera.Urnyx.xml:system/etc/permissions/com.google.android.GoogleCamera.Urnyx.xml
 
 # Power
 PRODUCT_PACKAGES += \
