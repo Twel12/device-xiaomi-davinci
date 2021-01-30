@@ -7,5 +7,28 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           android:sharedUserId="android.uid.system"
+          android:versionCode="1"
+          android:versionName="1.0"
           package="org.lineageos.keyhandler">
+
+    <application
+        android:label="Screen off FOD"
+        android:persistent="true">
+
+        <activity
+            android:name=".KeyHandlerActivity"
+            android:label="@string/sof_title"
+            android:theme="@style/Theme.Main">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.lockscreen" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/sof_summary" />
+        </activity>
+    </application>
 </manifest>
