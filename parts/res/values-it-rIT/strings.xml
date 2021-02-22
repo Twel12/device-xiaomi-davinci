@@ -47,5 +47,11 @@
     <string name="touch_sensitivity_summary">Controlla la sensibilità del touch screen per tocchi ripetuti</string>
     <string name="touch_resistant_title">Area non toccabile</string>
     <string name="touch_resistant_summary">Riduce la sensibilità al tocco in prossimità dei bordi per evitare tocchi accidentali</string>
+    
+    <!-- Vibration -->
+    <string name="vibration_control_title">Controllo vibrazione</string>
+    <string name="vibration_control_summary">Regola intensità vibrazione</string>
+    <string name="vibration_reset">Imposta il valore predefinito</string>
+    <string name="vibration_control_description">Imposta l\'intensità della vibrazione per feedback aptico, chiamate in entrata e notifiche</string>
 
 </resources>
