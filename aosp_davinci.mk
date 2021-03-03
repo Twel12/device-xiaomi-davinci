@@ -28,3 +28,5 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 EXTRA_FOD_ANIMATIONS := true
+# Face Unlock
+TARGET_FACE_UNLOCK := true
