@@ -39,3 +39,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Face Unlock
 TARGET_FACE_UNLOCK := true
+EXTRA_FOD_ANIMATIONS := true
