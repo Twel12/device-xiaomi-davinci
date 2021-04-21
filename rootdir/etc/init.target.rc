@@ -170,14 +170,6 @@ on property:sys.boot_completed=1
     write /sys/module/cpu_boost/parameters/dynamic_stune_boost_ms 1500
     write /dev/stune/top-app/schedtune.sched_boost 15
 
-    # create an stune group for camera-specific processes
-    mkdir /dev/stune/camera-daemon
-    write /dev/stune/camera-daemon/schedtune.prefer_idle 1
-    write /dev/stune/camera-daemon/schedtune.boost 0
-    chown system system /dev/stune/camera-daemon
-    chown system system /dev/stune/camera-daemon/tasks
-    chmod 0664 /dev/stune/camera-daemon/tasks
-
     # Set allocstall_threshold to 0
     # Set swappiness to 100
     write /sys/module/vmpressure/parameters/allocstall_threshold 0
@@ -185,9 +177,6 @@ on property:sys.boot_completed=1
 
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
-
-    # Start the Power HAL
-    setprop vendor.powerhal.init 1
 
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
