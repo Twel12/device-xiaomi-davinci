@@ -562,4 +562,7 @@
 
     <!-- Whether Hearing Aid profile is supported -->
     <bool name="config_hearing_aid_profile_supported">true</bool>
+
+     <!-- NightLight FOD -->
+    <bool name="disable_fod_night_light">true</bool>
 </resources>
