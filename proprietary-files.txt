@@ -42,8 +42,8 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# ANT+
-vendor/lib64/hw/com.dsi.ant@1.0-impl.so
+# ANT - from LA.UM.9.1.r1-09200-SMxxx0.0
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so|962a3e712339e27a19217bf73e0497a90387faef
 
 # Audio libraries
 lib/libxlog.so
@@ -362,7 +362,7 @@ vendor/bin/init.qti.chg_policy.sh
 vendor/etc/charger_fstab.qti
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
-# CNE  - from LA.UM.9.1.r1-09200-SMxxx0.0
+# CNE - from LA.UM.9.1.r1-09200-SMxxx0.0
 system_ext/framework/com.quicinc.cne.api-V1.1-java.jar|e71f1a060bc65eb373beb6d33158c0e2b37e2a70
 system_ext/framework/com.quicinc.cne.constants-V1.0-java.jar|e0e0bb8ed025b0682483c395de6ec42b5b3c0058
 system_ext/framework/com.quicinc.cne.constants-V2.0-java.jar|12730a1700afbe8afa6534d4e10ade07808b5398
@@ -782,6 +782,18 @@ vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib/vendor.qti.hardware.vpp@1.3.so
 
+# Neural - from LA.UM.9.1.r1-09200-SMxxx0.0
+vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti|9c28c743381b21ef2ff04e87928fdddbad3e998d
+vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc|4b7f2c5f914f3eef38f19936c0a06efc09b5b28c
+-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml|ac07e83ba7c2a87a2f216f04ec84df4539ea8507
+vendor/lib64/libhexagon_nn_stub.so|6173fdbc220aaee6fb241c6af4fe11edae7eb9c8
+vendor/lib64/libhta_hexagon_runtime.so|55ee2928fae3662b83c405875c1907525a29a1b0
+vendor/lib64/libnpu.so|22c6f273be0330f8971b06a3f339941049155597
+vendor/lib64/unnhal-acc-adreno.so|fc4a4beb8343e814d75eeac769a7a3310eac5e9e
+vendor/lib64/unnhal-acc-common.so|aec184825fccbc3e9d67c7b2e6393b67ce5d533c
+vendor/lib64/unnhal-acc-hta.so|33d90bdd068b64f3f68fc78a3e5239c8118ce666
+vendor/lib64/unnhal-acc-hvx.so|019475b5f33f833624f91e1f77d2b5e00dbe7432
+
 # NFC
 vendor/lib/libsn100u_fw.so
 
@@ -1027,12 +1039,14 @@ vendor/etc/sensors/config/sns_tilt_to_wake.json
 vendor/etc/sensors/config/tcs3701.json
 vendor/etc/sensors/sns_reg_config
 
-# Soter
--app/SoterService/SoterService.apk
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.soter@1.0.so
+# Soter - from LA.UM.9.1.r1-09200-SMxxx0.0
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|a6ea6031c27889797b96fe29ba100924b79fe3fb
+vendor/bin/vendor.qti.hardware.soter@1.0-provision|b67ab140a7b8ac47f8ff8e237ffbb74a03d333f3
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
+vendor/lib/hw/vendor.qti.hardware.soter@1.0-impl.so|5a99c0d1f44aa6898b6b786f0a71feaf4dac543b
+vendor/lib/vendor.qti.hardware.soter@1.0.so|cfe9a9564bfa26f97b2e417ab59abddc0a370f5c
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|2a60368784eafcb68dd855a5e2ea5c774ec5efa4
+vendor/lib64/vendor.qti.hardware.soter@1.0.so|1154dffcf41bd1a2257b93ebb4b20e0a8941de1c
 
 # Thermal
 vendor/bin/mi_thermald
