@@ -54,4 +54,7 @@
     <string name="vibration_reset">Imposta il valore predefinito</string>
     <string name="vibration_control_description">Imposta l\'intensità della vibrazione per feedback aptico, chiamate in entrata e notifiche</string>
 
+    <!-- Doze brightness -->
+    <string name="doze_brightness_title">Luminosità Doze</string>
+    <string name="doze_brightness_summary">Modalità %s abilitata</string>
 </resources>

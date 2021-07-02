@@ -54,5 +54,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             KcalUtils.writeCurrentSettings(sharedPrefs);
 
         VibratorSettings.restoreValue(context);
+        DozeUtils.onBootCompleted(context);
     }
 }

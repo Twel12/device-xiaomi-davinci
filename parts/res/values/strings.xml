@@ -111,4 +111,6 @@
     <string name="vibration_reset">The default value is set</string>
     <string name="vibration_control_description">Define the strength of the vibration for haptic feedback, incoming call and incoming notification</string>
 
+    <string name="doze_brightness_title">Doze brightness</string>
+    <string name="doze_brightness_summary">%s mode is enabled</string>
 </resources>
