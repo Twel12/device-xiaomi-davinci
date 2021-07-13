@@ -29,10 +29,10 @@ BOARD_VENDOR := xiaomi
 include vendor/xiaomi/davinci/BoardConfigVendor.mk
 
 # ANXCamera
--include vendor/aeonax/ANXCamera/BoardConfigAnx.mk
+#-include vendor/aeonax/ANXCamera/BoardConfigAnx.mk
 
 # MiuiCamera
--include vendor/miuicamera/common/BoardConfigVendor.mk
+#-include vendor/miuicamera/common/BoardConfigVendor.mk
 
 # Architecture
 TARGET_ARCH := arm64
