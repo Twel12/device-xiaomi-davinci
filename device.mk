@@ -375,12 +375,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/xiaomi
 
-# sounds
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sounds/ClassicalTheme.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/ClassicalTheme.ogg \
-    $(LOCAL_PATH)/sounds/Staryj_telefon.mp3:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Staryj_telefon.mp3 \
-	$(LOCAL_PATH)/sounds/Pixie_Dust.mp3:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Pixie_Dust.mp3
-
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
