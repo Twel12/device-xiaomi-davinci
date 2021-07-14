@@ -23,21 +23,8 @@
     <integer name="config_fingerprintSensorLocation">1</integer>
 
     <!-- Device specific doze package -->
-    <string name="config_dozeComponent">com.custom.ambient.display/com.custom.ambient.display.DozeSettings</string>
-
-    <!--Device Info -->
-    <bool name="config_supportSmartCharging">true</bool>
-    <bool name="config_supportBatteryHealth">true</bool>
-
-    <!-- Battery Health -->
-    <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
-    <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
-    <string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
+    <string name="config_customDozePackage">org.lineageos.settings/org.lineageos.settings.doze.DozeSettingsActivity</string>
 
     <!-- Screen off FOD -->
     <bool name="config_supportScreenOffFod">true</bool>
-
-    <!-- FOD recognizing animation -->
-    <bool name="config_showFODAnimationSettings">true</bool>
-
 </resources>
